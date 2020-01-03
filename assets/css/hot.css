@@ -44,13 +44,13 @@ box-sizing: border-box;
 	width: 500px;
 	height: 110px;
 }
-.div_shadow1
+.div_shadow
 {
 box-shadow: 8px 9px 0px #EBD4B5;
 -webkit-box-shadow: 8px 9px 0px #EBD4B5;
 -moz-box-shadow: 8px 9px 0px #EBD4B5;
 }
-.div_shadow
+.div_shadow1
 {
 width: 300px;
 height:370px;

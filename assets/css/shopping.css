@@ -80,7 +80,7 @@ table {
 }
 #step2{
 	position:absolute;
-	top:800px;
+	top:550px;
 	width:1000px;
 	height:800px;
 }
@@ -95,13 +95,13 @@ table {
 	top:300px;
 	left:250px;}
 #contact{
-	position:relative;
+	position:absolute;
 	width:250px;
 	height:40px;
 	padding:5px;
 	text-align:center;
-	top:20px;
-	left:320px;
+	top:350px;
+	left:620px;
 	font-size: 20px;
 	background-color:#E59866;
 	border-radius:30px;
@@ -109,12 +109,12 @@ table {
 	font-family:'Boogaloo', Microsoft JhengHei, cursive;
 }
 #e2{
-	position:relative;
+	position:absolute;
 	width:500px;
-	height:300px;
+	height:400px;
 	text-align:center;
-	top:80px;
-	left:200px;
+	top:400px;
+	left:500px;
 	font-size: 20px;
 	background-color:#F0B27A ;
 	border-radius:30px;

@@ -116,9 +116,16 @@ input.qtyminus {
 }
 .plus{
 	position: relative;
-	top:183px;
-	left: 1050px;
+	top:300px;
+	left: 920px;
 	z-index:3;
+	color: white;
+	font-family:Microsoft JhengHei; 
+	padding: 6px 12px;
+    border: 1px solid #a16a3a;
+    border-radius: 8px;
+    background: #e69853;
+	font-weight:bolder;
 }
 button{
 	color: white;
@@ -184,7 +191,7 @@ top:450px;
 }
 .comment3{
 position:relative;
-top:350px;
+top:550px;
 }
 
 
@@ -214,9 +221,9 @@ top:350px;
 	font-weight:bolder;
 	font-family:'Boogaloo', cursive;
 	color:#69491A;
-	position:relative;
-	top:90px;
-	left:1050px;
+	position:absolute;
+	top:520px;
+	left:1150px;
 
 
 }
