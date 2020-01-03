@@ -1,0 +1,22 @@
+#s1font{
+position: absolute;
+	top:210px;
+	left:70px;
+	font-size: 20px;
+	color: #015077;
+	font-family: Microsoft JhengHei;
+	font-weight:bolder;
+	text-align: center;
+
+}
+#s2font{
+	position: absolute;
+	top:210px;
+	left:70px;
+	font-size: 20px;
+	color: #015077;
+	font-family: Microsoft JhengHei;
+	font-weight:bolder;
+	text-align: center;
+
+}
