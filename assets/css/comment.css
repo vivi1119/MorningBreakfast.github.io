@@ -1,0 +1,132 @@
+.b{
+  background-color: #ffffff;
+  width: 650px;
+  height: 450px;
+  position: absolute;
+  top: 200px;
+  left: 450px;
+  opacity: 0.8;
+}
+.div_shadow1
+{
+box-shadow: 8px 9px 0px #EBD4B5;
+-webkit-box-shadow: 8px 9px 0px #EBD4B5;
+-moz-box-shadow: 8px 9px 0px #EBD4B5;
+}
+
+.text{
+  position: relative;
+  left:120px; 
+  top:120px;
+  font-family: Microsoft JhengHei;
+  color: gray;
+}
+.item{
+  position: relative;
+  left:170px; 
+  top:80px;
+  font-size: 20px;
+  color: black;
+  font-family: Microsoft JhengHei;
+}
+.bar{
+  position: relative;
+  left:310px; 
+  top:35px;
+  font-size: 20px;
+}
+.button{
+  width:120px;
+  height:40px;
+  font-size:20px;
+  position: absolute;
+  left:270px; 
+  top:355px;
+  background-color: 
+}
+.five1{
+  background-color: white; 
+  position: absolute;
+  top:800px ;
+  left:40px ;
+  width: 250px;
+  height: 800px;
+  margin-bottom: 50px;
+}
+.five2{
+  background-color: white; 
+  position: absolute;
+  top:800px ;
+  left:340px ;
+  width: 250px;
+  height: 800px;
+  margin-bottom: 50px;
+}
+.five3{
+  background-color: white; 
+  position: absolute;
+  top:800px ;
+  left:640px ;
+  width: 250px;
+  height: 800px;
+  margin-bottom: 50px;
+}
+.five4{
+  background-color: white; 
+  position: absolute;
+  top:800px ;
+  left:940px ;
+  width: 250px;
+  height: 800px;
+  margin-bottom: 50px;
+}
+.five5{
+  background-color: white; 
+  position: absolute;
+  top:800px ;
+  left:1240px ;
+  width: 250px;
+  height: 800px;
+  margin-bottom: 50px;
+}
+.p1{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:690px ;
+  left:120px ;
+  z-index: 3
+}
+
+.p2{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:690px ;
+  left:420px ;
+  z-index: 3
+}
+.p3{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:690px ;
+  left:720px ;
+  z-index: 3
+}
+.p4{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:690px ;
+  left:1020px ;
+  z-index: 3
+}
+.p5{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:690px ;
+  left:1320px ;
+  z-index: 3
+}

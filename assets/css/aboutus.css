@@ -1,0 +1,141 @@
+
+.div_shadow
+{
+width: 300px;
+height:420px;
+background-color: white;
+position: absolute;
+top:260px;
+left: 110px;
+}
+.div_shadow1
+{
+box-shadow: 8px 9px 0px #EBD4B5;
+-webkit-box-shadow: 8px 9px 0px #EBD4B5;
+-moz-box-shadow: 8px 9px 0px #EBD4B5;
+}
+#bgh1{
+	position: absolute;
+	top:25px;
+	left:25px;
+	width: 250px;
+	height:290px;
+	background-color:#EBD4B5;
+	opacity: 0.5; 
+	
+
+}#a1{
+	position: relative;
+	top:50px;
+	left:50px;
+	width: 200px;
+	height:230px;
+}
+#a1font{
+	position: absolute;
+	top:280px;
+	left:115px;
+	font-size: 20px;
+	color: #015077;
+	font-family: Microsoft JhengHei;
+	font-weight:bolder;
+	text-align: center;
+
+	
+}
+#a1font1{
+	position: absolute;
+	top:340px;
+	left:105px;
+	font-size: 20px;
+	color: #015077;
+	font-family: Microsoft JhengHei;
+	font-weight:bolder;
+	text-align: center;
+
+	
+}
+
+/*==方塊2==*/
+.div_shadow2
+{
+width: 300px;
+height:420px;
+background-color: white;
+position: absolute;
+top:260px;
+left:460px;
+}
+/*==方塊3==*/
+.div_shadow3
+{
+width: 300px;
+height:420px;
+background-color: white;
+position: absolute;
+top:260px;
+left:810px;
+}
+/*==方塊4==*/
+.div_shadow4
+{
+width: 300px;
+height:420px;
+background-color: white;
+position: absolute;
+top:260px;
+left: 1160px;
+}
+
+.bg{
+	
+	position: absolute;
+	top:115px;
+	z-index:-5;
+	width: 100%;
+	height: 730px;
+}
+#a2{
+	width: 1600px;
+	height:50px;
+	padding: 0;
+	margin:0;
+	background-color:#F5CBA7;
+	position: absolute;
+   top:800px;
+	
+
+}
+
+
+.pro3{
+
+	font-family: 'Alatsi', sans-serif;
+	font-size: 40px;
+	color: #015077;
+	position: absolute;
+ 	left:620px; 
+ 	top:70px;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.pro4{  
+  font: bold 300% Consolas, Monaco, monospace;
+  border-right: .1em solid black;
+  width: 16.5em; 
+  width: 11ch;
+  margin: 2em 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(21, end),
+  blink-caret .5s step-end infinite alternate;
+}
+#ha1{
+	position: absolute;
+	top:135px;
+	left:500px;
+	width: 500px;
+	height: 110px;
+}
