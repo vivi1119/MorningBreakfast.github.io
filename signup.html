@@ -1,3 +1,6 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%@page contentType="text/html;charset=utf-8" language="java" import="java.sql.*"%>
+<%@include file="config.jsp" %>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -25,14 +28,14 @@
 
    <div  id="header2">
        <div id="title" >
-      <a href="index.html"> <font id="title-font">
+      <a href="index.jsp"> <font id="title-font">
       Morning<br>
       Breakfast
       </font>
       </a>
   </div>
     <img src="img/sun.png" id="sun">
-        <a href="shopping.html">
+        <a href="shopping.jsp">
       <div id="shoppingcart1">
     
       <img src="img/shopping-cart.png" >
@@ -40,26 +43,46 @@
     </div>
  </a>
     <div id="signin">
-      <a href = "signin.html" id="signin-font">
-        
-      Sign in 
-       
-      </a>
+	<%
+		if(session.getAttribute("email")==null)
+		{
+			sql="select email from comsumer where email='" + session.getAttribute("email")+"'"; 
+			ResultSet rs=con.createStatement().executeQuery(sql);  
+			if(!rs.next()) //未登入
+			{ 	  
+    %>
+                   <a href = "signin.jsp" id="signin-font">
+                     Sign in 
+                    </a> 
+		<% }
+		}	
+		else if(session.getAttribute("email")!=null)
+		{
+			sql="select email from comsumer where email='" + session.getAttribute("email")+"'"; 
+			ResultSet rs=con.createStatement().executeQuery(sql);  
+			if(rs.next()) //登入
+			{ %>
+				  <a href = "Logout.jsp" id="signin-font">
+					 Logout
+				  </a>
+	<%		}
+	    }
+		
+		%>
     </div>
     
 
 	<nav id="header3" >
        <ul  id="main">
-           <li><a  href="hamburger.html" style="font-size:35px;color:#FFFFFF">MENU</a>  
+           <li><a  href="hamburger.jsp" style="font-size:35px;color:#FFFFFF">MENU</a>  
            
           </li>
           <li><a href="#" style="font-size:35px;color:#FFFFFF">MEMBER</a> 
             <ul class="drop">
             <div >
-              <li style="font-size:25px;"><a href="qa.html" style="font-size:23px; color:#FFFFFF;">Q&A</a></li>
+              <li style="font-size:25px;"><a href="qa.jsp" style="font-size:23px; color:#FFFFFF;">Q&A</a></li>
               
-              <li style="font-size:25px;"><a href="information.html" style="font-size:23px; color:#FFFFFF;">INFORMATION</a></li>
-              <li style="font-size:25px;"><a href="check.html" style="font-size:23px; color:#FFFFFF;">CHECK</a></li>
+              <li style="font-size:25px;"><a href="information.jsp" style="font-size:23px; color:#FFFFFF;">INFORMATION</a></li>
               
             </div>
             </ul> 
@@ -67,8 +90,8 @@
           <li><a href="#" style="font-size:35px;color:#FFFFFF">CONTACT US</a> 
             <ul class="drop">
             <div >
-              <li style="font-size:25px;"><a href="about.html" style="font-size:23px; color:#FFFFFF;">ABOUT US</a></li>
-              <li style="font-size:25px;"><a href="email.html" style="font-size:23px; color:#FFFFFF;">E-mail</a></li>
+              <li style="font-size:25px;"><a href="about.jsp" style="font-size:23px; color:#FFFFFF;">ABOUT US</a></li>
+              <li style="font-size:25px;"><a href="email.jsp" style="font-size:23px; color:#FFFFFF;">E-mail</a></li>
             </div>
             </ul> 
           </li>
@@ -84,33 +107,33 @@
     <div class="container1" >
         <div class="row sign size1">
             <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="POST" action="register.jsp">
                     <div class="heading">Sign Up Form</div>
                     <div class="form-group">
-                        <i class="fa fa-user"></i><input required="" name="login[username]" type="email" class="form-control" placeholder="Username" id="exampleInputEmail1">
+                        <i class="fa fa-user"></i><input required="" name="username" type="email" class="form-control" placeholder="Username" id="exampleInputEmail1" >
                     </div>
 
 
                     <div class="form-group">
-                        <i class="fa fa-user"></i><input required="" name="login[phone number]" type="email" class="form-control" placeholder="Phone Number" id="exampleInputEmail1">
+                        <i class="fa fa-user"></i><input required="" name="tel" type="email" class="form-control" placeholder="Phone Number" id="exampleInputEmail1" >
                     </div>
 
                     <div class="form-group">
-                        <i class="fa fa-user"></i><input required="" name="login[username]" type="email" class="form-control" placeholder="Birthday" id="exampleInputEmail1">
+                        <i class="fa fa-user"></i><input required="" name="birthday" type="email" class="form-control" placeholder="Birthday" id="exampleInputEmail1" >
                     </div>
 
                     <div class="form-group">
-                        <i class="fa fa-user"></i><input required="" name="login[username]" type="email" class="form-control" placeholder="E-mail" id="exampleInputEmail1">
+                        <i class="fa fa-user"></i><input required="" name="email" type="email" class="form-control" placeholder="E-mail" id="exampleInputEmail1" >
                     </div>
 
-                    <div class="form-group" >
-                        <i class="fa fa-lock"></i><input id="nosy" required="" name="login[password]" type="password" class="form-control" placeholder="Password" onKeyUp="value=value.replace(/[^\d|qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP]/g,'')">
+                    <div class="form-group">
+                        <i class="fa fa-lock"></i><input required="" name="password" type="password" class="form-control" placeholder="Password" >
                     </div>
 
 
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-default" onclick="location.href='signin.html'"><i class="fa fa-arrow-right"></i></button>
+                        <button type="submit" class="btn btn-default" onclick="location.href='signin.jsp'"><i class="fa fa-arrow-right"></i></button>
                     </div>
                     
                 </form>
@@ -126,12 +149,7 @@
 
 <img src="img/bg4.png" class="bgs">
  
-<script>
 
-
-
-
-</script>
 
   </body>
 
